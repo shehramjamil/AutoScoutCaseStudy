@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/coloredItemListFragment">
+
+    <fragment
+        android:id="@+id/coloredItemListFragment"
+        android:name="com.example.autoscoutcasestudy.ui.ColoredItemListFragment"
+        android:label="ColoredItemListFragment">
+        <action
+            android:id="@+id/action_coloredItemListFragment_to_colorFragment"
+            app:destination="@id/colorFragment">
+            <argument
+                android:name="colorCode"
+                app:argType="integer" />
+        </action>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/colorFragment"
+        android:name="com.example.autoscoutcasestudy.ui.ColorFragment"
+        android:label="ColorFragment">
+        <argument
+            android:name="colorCode"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>
